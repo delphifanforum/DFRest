@@ -1,0 +1,77 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-100000000011}</ProjectGuid>
+    <MainSource>DFRest.dpk</MainSource>
+    <ProjectVersion>19.3</ProjectVersion>
+    <FrameworkType>None</FrameworkType>
+    <Base>True</Base>
+    <Config Condition="'$(Config)'==''">Release</Config>
+    <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    <ProjectName Condition="'$(ProjectName)'==''">DFRest</ProjectName>
+    <AppType>Package</AppType>
+    <GenPackage>true</GenPackage>
+    <GenDll>true</GenDll>
+    <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)|$(Platform)'=='Release|Win32'">
+    <DCC_DCPOutput>$(MSBuildProjectDirectory)\..\..\Lib\D11\$(Platform)\$(Config)</DCC_DCPOutput>
+    <DCC_BplOutput>$(MSBuildProjectDirectory)\..\..\Lib\D11\$(Platform)\$(Config)</DCC_BplOutput>
+    <DCC_ExeOutput>$(MSBuildProjectDirectory)\..\..\Lib\D11\$(Platform)\$(Config)</DCC_ExeOutput>
+    <DCC_UnitSearchPath>$(MSBuildProjectDirectory)\..\..\Source;$(MSBuildProjectDirectory)\..\..\Source\Component;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+    <DCC_Description>DFRest 1.0.0 Type-safe REST Runtime - Delphifan</DCC_Description>
+    <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+    <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    <VerInfo_MajorVer>1</VerInfo_MajorVer>
+    <VerInfo_MinorVer>0</VerInfo_MinorVer>
+    <VerInfo_Release>0</VerInfo_Release>
+    <VerInfo_Build>0</VerInfo_Build>
+    <VerInfo_Keys>CompanyName=Delphifan;FileDescription=DFRest Type-safe REST;FileVersion=1.0.0.0;InternalName=DFRest;LegalCopyright=Copyright (C) Alen Ibric / Delphifan;ProductName=DFRest;ProductVersion=1.0.0.0;Comments=adsdelphi@gmail.com | www.delphifan.com</VerInfo_Keys>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)|$(Platform)'=='Debug|Win32'">
+    <DCC_DCPOutput>$(MSBuildProjectDirectory)\..\..\Lib\D11\$(Platform)\$(Config)</DCC_DCPOutput>
+    <DCC_BplOutput>$(MSBuildProjectDirectory)\..\..\Lib\D11\$(Platform)\$(Config)</DCC_BplOutput>
+    <DCC_ExeOutput>$(MSBuildProjectDirectory)\..\..\Lib\D11\$(Platform)\$(Config)</DCC_ExeOutput>
+    <DCC_UnitSearchPath>$(MSBuildProjectDirectory)\..\..\Source;$(MSBuildProjectDirectory)\..\..\Source\Component;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+    <DCC_Description>DFRest 1.0.0 Type-safe REST Runtime - Delphifan</DCC_Description>
+    <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    <VerInfo_MajorVer>1</VerInfo_MajorVer>
+    <VerInfo_MinorVer>0</VerInfo_MinorVer>
+    <VerInfo_Release>0</VerInfo_Release>
+    <VerInfo_Build>0</VerInfo_Build>
+    <VerInfo_Keys>CompanyName=Delphifan;FileDescription=DFRest Type-safe REST;FileVersion=1.0.0.0;InternalName=DFRest;LegalCopyright=Copyright (C) Alen Ibric / Delphifan;ProductName=DFRest;ProductVersion=1.0.0.0;Comments=adsdelphi@gmail.com | www.delphifan.com</VerInfo_Keys>
+  </PropertyGroup>
+  <ItemGroup>
+    <DelphiCompile Include="$(MainSource)">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="rtl.dcp" />
+    <DCCReference Include="vcl.dcp" />
+    <DCCReference Include="xmlrtl.dcp" />
+    <DCCReference Include="dbrtl.dcp" />
+    <DCCReference Include="RESTComponents.dcp" />
+    <DCCReference Include="..\..\Source\DFRest.Version.pas" />
+    <DCCReference Include="..\..\Source\DFRest.Types.pas" />
+    <DCCReference Include="..\..\Source\DFRest.Attributes.pas" />
+    <DCCReference Include="..\..\Source\DFRest.Exceptions.pas" />
+    <DCCReference Include="..\..\Source\DFRest.Settings.pas" />
+    <DCCReference Include="..\..\Source\DFRest.Response.pas" />
+    <DCCReference Include="..\..\Source\DFRest.Http.pas" />
+    <DCCReference Include="..\..\Source\DFRest.Json.pas" />
+    <DCCReference Include="..\..\Source\DFRest.Proxy.pas" />
+    <DCCReference Include="..\..\Source\DFRest.Service.pas" />
+    <DCCReference Include="..\..\Source\Component\DFRest.Component.pas" />
+    <BuildConfiguration Include="Release">
+      <Key>Cfg_2</Key>
+      <CfgParent>Base</CfgParent>
+    </BuildConfiguration>
+    <BuildConfiguration Include="Base">
+      <Key>Base</Key>
+    </BuildConfiguration>
+    <BuildConfiguration Include="Debug">
+      <Key>Cfg_1</Key>
+      <CfgParent>Base</CfgParent>
+    </BuildConfiguration>
+  </ItemGroup>
+  <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" />
+</Project>
