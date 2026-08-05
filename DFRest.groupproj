@@ -1,0 +1,47 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{D0F0E5A1-7B2C-4D8E-9F01-DF0E57000001}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Projects Include="Packages\D103\DFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Packages\D103\dclDFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Packages\D104\DFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Packages\D104\dclDFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Packages\D11\DFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Packages\D11\dclDFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Packages\D12\DFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Packages\D12\dclDFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Packages\D13\DFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Packages\D13\dclDFRest.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+    <Projects Include="Demo\DFRestDemo.dproj">
+      <Dependencies></Dependencies>
+    </Projects>
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality.12</Borland.Personality>
+    <Borland.ProjectType/>
+    <BorlandProject>
+      <Default.Personality/>
+    </BorlandProject>
+  </ProjectExtensions>
+</Project>
